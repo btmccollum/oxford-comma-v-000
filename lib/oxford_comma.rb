@@ -5,5 +5,8 @@ def oxford_comma(array)
   #   array.join(" and ")
   # else array.length >= 3
   #   ajoin(", ")
-    array.to_sentence
+    new_array = array.map {|word| "#{word} ,"}
+    output = new_array.join(", and")
+    output
+
 end
