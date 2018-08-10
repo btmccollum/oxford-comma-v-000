@@ -11,7 +11,7 @@ def oxford_comma(array)
     array.join(" and ")
   else
     new_array = array.map {|word| "#{word} ,"}
-    output = new_array.join(", ").last(", and")
+    output[0..-2] = new_array.join(", ") << ", and " << output[-1]
     output
 end
 end
